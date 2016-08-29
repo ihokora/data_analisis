@@ -1,24 +1,40 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Live Demo, but without client :-(  https://datasets-analisis.herokuapp.com/
 
-Things you may want to cover:
+Running Locally
 
-* Ruby version
+  Clone the repo
+    $ git clone https://github.com/sikigo/data_analisis.git
+    $ cd data_analisis
 
-* System dependencies
+  Install dependencies
+    $ bundle install
 
-* Configuration
+  Migrate database
+    $ rails db:migrate
 
-* Database creation
+  And start the server
+    $ rails s
 
-* Database initialization
+The following API routes are available for use by your client
 
-* How to run the test suite
+POST   /auth       Email registration. Requires 'email', 'password', and
+                   'password_confirmation' params.
 
-* Services (job queues, cache servers, search engines, etc.)
+POST   /sign_in    Email authentication. Requires 'email' and password
+                   as params
 
-* Deployment instructions
+DELETE /sign_out   Use this route to end the user's current session
 
-* ...
+
+POST /analisis     Array statistical analysis. Requires 'data_x' array
+
+POST /correlation  Calcaulate Pearson correaltion coefficient between
+                   two datasets(array). Requires 'data_x' 'and 'data_y' params
+
+
+Sign Up
+![Alt text](/images/registration.png?raw=true
+
+
