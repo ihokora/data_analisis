@@ -19,7 +19,7 @@ class DatasetsController < ApplicationController
     data_x = dataset.data_x.split(",").map(&:to_i)
     data_y = dataset.data_y.split(",").map(&:to_i)
     correlation_coefficient = ruby_pearson(data_x, data_y)
-    render json: correlation_coefficient
+    render json: {:correlation_coefficient => correlation_coefficient}
   end
 
 
