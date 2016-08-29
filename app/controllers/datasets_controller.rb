@@ -9,6 +9,8 @@ class DatasetsController < ApplicationController
     q3 = stats[:q3]
     outliers = outliers_check(data_x, q1, q3 )
     stats[:outliers] = outliers
+    stats.except!(:number, :sum, :variance, :standard_deviation,
+                 :mode, :range, :q2)
     render json: stats
   end
 
