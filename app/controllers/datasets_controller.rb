@@ -1,9 +1,14 @@
 class DatasetsController < ApplicationController
 
   def analisis
-    @dataset = Dataset.new(dataset_params)
-    render json: @dataset
+    dataset = Dataset.new(dataset_params)
+    data_x = dataset.data_x.split(",").map(&:to_i)
+    stats = DescriptiveStatistics::Stats.new(data_x)
+    stats = stats.descriptive_statistics
+    render json: stats
   end
+
+
 
 
   private

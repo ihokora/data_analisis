@@ -9,6 +9,8 @@ gem 'sqlite3'
 gem 'puma', '~> 3.0'
 # Token based authentication for Rails JSON APIs
 gem 'devise_token_auth'
+# Allow easy calculation of basic descriptive statistics
+gem 'descriptive_statistics', :require => 'descriptive_statistics/safe'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production

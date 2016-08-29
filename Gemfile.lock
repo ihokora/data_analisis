@@ -43,6 +43,7 @@ GEM
     builder (3.2.2)
     byebug (9.0.5)
     concurrent-ruby (1.0.2)
+    descriptive_statistics (2.5.1)
     devise (4.2.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -161,6 +162,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  descriptive_statistics
   devise_token_auth
   factory_girl_rails
   ffaker
